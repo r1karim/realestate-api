@@ -93,6 +93,9 @@ to search for a property
 ```properties
 GET /api/v1/properties/search/{query}
 
+Possible attributes in a search: type/price_min/price_max/size_min/size_max/location/max_bedrooms/min_bedrooms/geolat/geolng /radius
+P.S: geolat, geolng and radius must be used altogether in search query
+
 example: 
 
 /api/v1/properties/type=a&size_max=600
