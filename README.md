@@ -64,3 +64,10 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+## Running
+To run the REST Api you need to open a commandline within the Api's folder and run the following command
+```properties
+php artisan serve
+```  
