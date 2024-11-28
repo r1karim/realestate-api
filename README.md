@@ -114,8 +114,12 @@ to add a property
 
 ```properties
 POST /api/v1/properties/
+
+Headers:
+
 Accept: Application/json
 
+Body:
 {
     "address": "test addr22",
     "size": 180,
