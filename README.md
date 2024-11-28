@@ -74,6 +74,12 @@ To run the REST Api you need to open a commandline within the Api's folder and r
 php artisan serve
 ```  
 
+To initialise the database with a sample of data you can use the following command
+
+```properties
+php artisan migrate --seed
+```  
+
 ## Working with the API
 
 to retrieve all properties
