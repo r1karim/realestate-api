@@ -67,7 +67,53 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 
 ## Running
+
 To run the REST Api you need to open a commandline within the Api's folder and run the following command
+
 ```properties
 php artisan serve
 ```  
+
+## Working with the API
+
+to retrieve all properties
+```properties
+GET /api/v1/properties/
+```  
+
+to retrieve a specific property whos id is known
+```properties
+GET /api/v1/properties/{id}
+
+example: /api/v1/properties/1
+
+```  
+
+to search for a property
+```properties
+GET /api/v1/properties/search/{query}
+
+example: 
+
+/api/v1/properties/type=a&size_max=600
+/api/v1/properties/search?min_bedrooms=4
+/api/v1/properties/search?geolat=30.0632&geolng=171.2824&radius=100000
+
+``` 
+
+to add a property
+
+```properties
+POST /api/v1/properties/
+Accept: Application/json
+
+{
+    "address": "test addr22",
+    "size": 180,
+    "price": 800,
+    "number_of_bedrooms":3,
+    "geolat":"31.0",
+    "geolng":"1.0"
+}
+
+``` 

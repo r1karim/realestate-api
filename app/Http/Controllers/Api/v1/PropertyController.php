@@ -96,10 +96,14 @@ class PropertyController extends Controller
             $query->where('address', 'like', '%' . $request->input('location') . '%');
         }
     
-        if ($request->has('bedrooms')) {
-            $query->where('number_of_bedrooms', $request->input('bedrooms'));
+        if ($request->has('max_bedrooms')) {
+          $query->where('number_of_bedrooms', '<=', $request->input('max_bedrooms'));
         }
         
+        if ($request->has('min_bedrooms')) {
+          $query->where('number_of_bedrooms', '>=', $request->input('min_bedrooms'));
+        }
+
         if ($request->has('geolat') || $request->has('geolng')) {
           if (!$request->has('geolng') || !$request->has('geolat') || !$request->has('radius')) {
               return response()->json([
